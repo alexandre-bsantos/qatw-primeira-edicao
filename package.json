@@ -20,6 +20,7 @@
     "@types/node": "^22.14.0"
   },
   "dependencies": {
+    "bullmq": "^5.53.2",
     "pg-promise": "^11.13.0"
   }
 }

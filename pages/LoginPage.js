@@ -1,3 +1,5 @@
+import { log } from "console";
+
 export class LoginPage {
 
     constructor(page) {
@@ -21,7 +23,7 @@ export class LoginPage {
         await this.page.getByRole('button', { name: 'Continuar' }).click();
     }
 
-    async informa2FA(codigo) {
+    async informa2FA(codigo) {        
         await this.page.getByRole('textbox', { name: '000000' }).fill(codigo);
         await this.page.getByRole('button', { name: 'Verificar' }).click();
     }
