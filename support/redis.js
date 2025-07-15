@@ -7,10 +7,10 @@ const connection = {
 
 const queueName = 'twoFactorQueue'
 
-const queue = new Queue(queueName, {connection})
+const queue = new Queue(queueName, { connection })
 
 export const cleanJobs = async () => {
-    await queue.obliterate()
+    await queue.obliterate({ force: true })
 }
 
 export const getJob = async () => {
